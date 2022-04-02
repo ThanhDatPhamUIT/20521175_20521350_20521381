@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Computer Network lab - 2</title>
     <style>
       * {
@@ -9,17 +10,23 @@
       }
       header {
         height: 60px;
-        background: #262626;
+        background: #f2f2e4;
         padding: 0 50px;
+        z-index: 1;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        overflow: hidden;
+        min-height: 100vh;
       }
       .logo-wrapper {
         display: flex;
         align-items: center;
         width: 30%;
         float: left;
-        color: #fff;
+        color: #2c0a7a;
         font-weight: bold;
-        text-transform: uppercase;
         line-height: 60px;
         font-size: 35px;
         font-family: sans-serif;
@@ -37,23 +44,39 @@
       }
       nav ul li a {
         text-decoration: none;
-        color: #fff;
+        color: #2c0a7a;
         font-family: sans-serif;
         font-weight: bold;
         margin: 0 10px;
         line-height: 60px;
-        text-transform: uppercase;
       }
       .banner img {
-        /* display:block;
-     	margin-left: auto; margin-right: auto; */
+        position: relative;
+        display: block;
         width: 100%;
         object-fit: cover;
-        filter: brightness(70%);
-        max-height: 100vh;
+        max-height: calc(100vh - 122px);
+        filter: brightness(50%);
+      }
+      .banner::before {
+        content: "";
+        position: fixed;
+        top: 60px;
+        height: 600px;
+        backdrop-filter: blur(4px);
+        width: 100%;
+        z-index: 2;
       }
       .content {
-        padding: 5%;
+        position: absolute;
+        top: 20%;
+        left: 0;
+        padding: 0 50px;
+        background-image: url(".\img\pic2.jpg");
+        background-repeat: none;
+        width: 100%;
+        color: #fafca9;
+        z-index: 10;
       }
       .content p {
         font-size: 18px;
@@ -62,10 +85,13 @@
         margin-bottom: 25px;
       }
       footer {
-        background: #000;
-        color: #fff;
-        padding: 15px 50px;
-        text-align: center;
+        background: #f2f2e4;
+        color: #2c0a7a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 660px);
+        width: 100%;
       }
 
       @media (max-width: 600px) {
@@ -101,53 +127,50 @@
     <header>
       <div class="logo-wrapper">
         <img src="./img/logo-uit.png" alt="" class="logo" />
-        Group.06
+        GROUP.06
       </div>
       <nav>
         <ul>
           <li>
-            <a href="https://www.facebook.com/thanhdatpham.uit/" target="_blank"
-              >About</a
+            <a href="https://docs.google.com/document/d/16jZY0QN38KsC7-okg0hHCg-6USf7rOzjSBOicsGvfnQ/edit?usp=sharing" target="_blank"
+              >About us</a
+            >
+          </li>
+	  <li>
+            <a href="https://docs.google.com/document/d/1x6mzxoozwd46QCLfeTDEePzx-7xH5qdb/edit?usp=sharing&ouid=105005712993859991493&rtpof=true&sd=true" target="_blank"
+              >Project</a
             >
           </li>
           <li>
-            <a href="https://www.facebook.com/thanhdatpham.uit/" target="_blank"
-              >Portfolio</a
-            >
-          </li>
-
-          <li>
-            <a href="https://zalo.me/g/jkmblq436" target="_blank">Contact</a>
+            <a href="https://teams.microsoft.com/l/team/19%3ap873vDZMH3RRL0eaMFpQkNmOf-YpUBy2p0lIVd9GCog1%40thread.tacv2/conversations?groupId=06c04122-cea5-4324-bd90-5a2fd8950894&tenantId=2dff09ac-2b3b-4182-9953-2b548e0d0b39" target="_blank">Contact</a>
           </li>
         </ul>
       </nav>
     </header>
-    <center>
-      <div class="banner"><img alt="" src=".\img\pic2.jpg" /></div>
-    </center>
+      <div class="banner"><img alt="" src="./img/pic2.jpg" /></div>
     <div class="content">
       <p>
-        Full Name: Phạm Thành Đạt <br />
-        Student ID: 20521175 <br />
-        Class: CTTT2020 <br />
-        "Nếu được chọn lại tôi vẫn chọn UIT là đích đến thanh xuân của mình"
+        <b>Full Name:</b> Phạm Thành Đạt <br />
+        <b>Student ID:</b> 20521175 <br />
+        <b>Class:</b> CTTT2020 <br />
+        <font color="#C1CDC1"><i>"Nếu được chọn lại tôi vẫn chọn UIT là đích đến thanh xuân của mình"</i></font>
+</p>
+      <p>
+        <b>Full Name:</b> Thiều Huy Hoàng<br />
+        <b>Student ID:</b> 20521350 <br />
+        <b>Class:</b>CTTT2020 <br />
+        <font color="#C1CDC1"><i>"UIT - Nơi biến đam mê của tôi thành sự thật"</i></font>
       </p>
       <p>
-        Full Name: Thiều Huy Hoàng<br />
-        Student ID: 20521350 <br />
-        Class: CTTT2020 <br />
-        "UIT - Nơi biến đam mê của tôi thành sự thật"
-      </p>
-      <p>
-        Full Name: Kiều Xuân Diệu Hương <br />
-        Student ID: 20521381 <br />
-        Class: CTTT2020 <br />
-        "UIT không những là ngôi nhà thứ hai mà nó còn là nơi tôi sống và cháy
-        hết mình với khát vọng của bản thân"
+        <b>Full Name:</b> Kiều Xuân Diệu Hương <br />
+        <b>Student ID:</b> 20521381 <br />
+        <b>Class:</b> CTTT2020 <br /></font>
+        <font color="#C1CDC1"><i>"UIT không những là ngôi nhà thứ hai mà nó còn là nơi tôi sống và cháy
+        hết mình với khát vọng của bản thân"</i>
       </p>
     </div>
     <footer>
-      <p>UIT - Toàn Diện - Sáng Tạo - Phụng Sự</p>
+      <p><b>UIT - Toàn Diện - Sáng Tạo - Phụng Sự</b></p>
     </footer>
   </body>
 </html>
